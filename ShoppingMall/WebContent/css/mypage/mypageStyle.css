@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/* 하단 부트스트랩 하단 부트스트랩 버튼 (선택주소록 삭제, 배송지등록)색 변경    */
+.btn-light {
+    background-color: #EEEEEE;
+    border-color: #cccccc;
+    color: #616161; }
+.btn-light:hover,
+.btn-light:focus {
+    border-color: #cccccc;
+    background-color: #cccccc;
+    color: #FFF; }
+.btn-light:active,
+.btn-light:visited,
+.btn-light:active:focus,
+.btn-light:active:hover {
+    border-color: #cccccc;
+    background-color: #cccccc;
+    color: #FFF; }
+    
+    
+    .btn-dark {
+    background-color: #555555;
+    border-color: #555555;
+    color: #c0c0c0; 
+    }
+.btn-dark:hover,
+.btn-dark:focus {
+    border-color: #cccccc;
+    background-color: #cccccc;
+    color: #FFF; }
+.btn-dark:active,
+.btn-dark:visited,
+.btn-dark:active:focus,
+.btn-dark:active:hover {
+    border-color: #cccccc;
+    background-color: #cccccc;
+    color: #FFF; }
+    
+/* 페이징 */
+.pagination {
+   justify-content: center;
+}
+
+body > div.container.p-5 > nav > ul > li > a{
+	color:#616161;
+	font-size: 13px;
+	padding-bottom: 10px;
+}
+
+body > div.container.p-5 > nav > ul > li > a > span {
+	color:#616161;
+	font-size: 11px;
+}  
+
+/* 폼 입력칸 */
+ .form-control {
+ 		height: 25px;
+ 		border-radius: 0;
+ 		font-size : 13px;
+ }
+ 
+ /* 전화번호select */
+ .selectpicker {
+ 		width: 57px;
+ 		height: 25px;
+ 		border-color: gray;
+ }
+::placeholder {
+ color: black;
+ font-size: 0.8em;
+ font-weight: 200;
+ opacity: 1; /* Firefox */
+} 
+input {
+  margin-left: 3px;
+} 
