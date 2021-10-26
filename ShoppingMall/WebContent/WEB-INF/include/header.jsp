@@ -82,7 +82,7 @@
 						<c:choose>
 							<c:when test="${sessionScope.loginuser.loginType == 'kakao'}">
 								<li class="nav-item"><a class="nav-link" onclick="kakaoLogout();">로그아웃!</a></li>
-								<!-- <li class="nav-item"><a class="nav-link" onclick="unlinkApp();">연결끊기.테스트용</a></li> -->
+								<li class="nav-item"><a class="nav-link" onclick="unlinkApp();">연결끊기.테스트용</a></li>
 							</c:when>
 							<c:otherwise>
 								<li class="nav-item"><a class="nav-link" href="/member/logout.go">로그아웃</a></li>						

@@ -26,7 +26,7 @@ import product.model.SortVO;
 @WebServlet(
 		urlPatterns = { "*.go" }, 
 		initParams = { 
-				@WebInitParam(name = "FrontControllerA", value = "C:/git/SemiProject/WebContent/WEB-INF/Command.properties")
+				@WebInitParam(name = "FrontControllerA", value = "C:/Users/a/git/ShoppingMall/ShoppingMall/WebContent/WEB-INF/Command.properties")
 		})
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -34,11 +34,8 @@ public class FrontController extends HttpServlet {
 	
 	public void init(ServletConfig config) throws ServletException {
 		
-		String props = config.getInitParameter("FrontControllerA"); 
-		
-		System.out.println("~~~ 확인용 props => " + props);
-		
-		FileInputStream fis = null; // properties 파일을 읽어오기 위한 스트림
+		String props = config.getInitParameter("FrontControllerA"); 				
+		FileInputStream fis = null; 
 		try {
 			fis = new FileInputStream(props);
 			Properties pr = new Properties();
@@ -54,7 +51,7 @@ public class FrontController extends HttpServlet {
 				if(className != null) {
 					className = className.trim();
 					Class<?> cls = Class.forName(className);
-					Constructor<?> constrt = cls.getDeclaredConstructor(); // 생성자 만들기
+					Constructor<?> constrt = cls.getDeclaredConstructor(); 
 					Object obj = constrt.newInstance(); // 
 					System.out.println("~~~ 확인용 obj.toString() => " + obj.toString()); 
 					cmdMap.put(key, obj); 
@@ -87,13 +84,6 @@ public class FrontController extends HttpServlet {
 		} else {
 			try {
 				request.setCharacterEncoding("UTF-8");
-				
-				InterProductDAO pdao = new ProductDAO();
-				
-				// 모든 카테고리 가져오기
-				List<SortVO> sortList = pdao.AllSort();
-				
-				request.setAttribute("sortList", sortList);
 				
 				action.execute(request, response); // 요청시 로직을 실행할 메소드 실행
 				String viewPage = action.getViewPage(); // 반환할 페이지 가져오기
